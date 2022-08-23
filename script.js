@@ -8,35 +8,35 @@ let quotes = [
   ];
   
   document.addEventListener("DOMContentLoaded", function(event) {
-    // Random quote of the day generator
+    
     const randomQuote = function() {
       document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
     };
     randomQuote();
     
-    // Do all of your work inside the document.addEventListener  
+     
   
-    // Part 1
+    
     const changeTitle = () => {
       document.getElementById('main-title').innerHTML = "DOM's World"
     };
     changeTitle();
   
   
-    // Part 2
+    
   const changeBackgroundColor = () => {
     document.querySelector('body').style.backgroundColor = 'green';
   };
   
   changeBackgroundColor();
-    // Part 3
+    
   const domsFavoriteThings = () => {
     const listTag = document.getElementById('favorite-things')
     listTag.removeChild(listTag.lastElementChild)
   }
   domsFavoriteThings();
   
-    // Part 4
+    
   const special = () => {
     const specialTitle = document.querySelectorAll('special-title');
     for (let title of specialTitle) {
@@ -45,7 +45,7 @@ let quotes = [
   }
   special();
   
-    // Part 5
+    
   const pastRace = () => {
     const pastList = document.getElementById('past-races');
     pastList.removeChild(pastList.children[3]);
@@ -53,7 +53,7 @@ let quotes = [
   pastRace();
   
   
-    // Part 6
+    
   
   const addRace = () => {
     const newRace = document.createElement('li');
@@ -63,7 +63,7 @@ let quotes = [
   };
   addRace();
   
-    // Part 7
+    
   const newPost = (title, subtitle) => {
   const blogPosts = document.querySelector('.main');
   
@@ -86,12 +86,12 @@ let quotes = [
   }
   newPost('Seattle', 'THIS RACE WAS SUPER EPIC!!');
   
-    // Part 8
+    
   
   document.getElementById('quote-title').addEventListener('click', (event) => {
     randomQuote();
   });
-    // Part 9
+    
   const blogPosts = document.querySelectorAll('.blog-post');
   
   blogPosts.forEach((item) => {
